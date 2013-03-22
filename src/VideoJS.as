@@ -237,6 +237,7 @@ package{
             _app.model.shownDuration = getValueFromFlashvars('duration');
             _app.model.startTime = getValueFromFlashvars('startTime');
             _app.model.endTime = getValueFromFlashvars('endTime');
+            _app.model.aspectRatio = getValueFromFlashvars('aspectRatio');
 
             if (loaderInfo.parameters.subclip != undefined && loaderInfo.parameters.subclip == "true") {
                 _app.model.subclip = true;

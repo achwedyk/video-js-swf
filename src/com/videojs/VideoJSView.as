@@ -95,7 +95,7 @@ package com.videojs{
             
             var __availableWidth:int = _model.stageRect.width;
             var __availableHeight:int = _model.stageRect.height;
-            
+
             var __nativeWidth:int = 100;
             
             if(_model.metadata.width != undefined){
@@ -116,9 +116,11 @@ package com.videojs{
                 __nativeHeight = _uiVideo.videoHeight;
             }
 
+            var aspectRatio:Number = _model.aspectRatio > 0 ? _model.aspectRatio : __nativeWidth / __nativeHeight;
+
             // first, size the whole thing down based on the available width
             __targetWidth = __availableWidth;
-            __targetHeight = __targetWidth * (__nativeHeight / __nativeWidth);
+            __targetHeight = __targetWidth / aspectRatio;
             
             if(__targetHeight > __availableHeight){
                 __targetWidth = __targetWidth * (__availableHeight / __targetHeight);

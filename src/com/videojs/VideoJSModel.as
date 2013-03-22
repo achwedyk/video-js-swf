@@ -61,6 +61,7 @@ package com.videojs{
         private var _shownDuration:Number = 0;
         private var _startTime:Number = 0;
         private var _endTime:Number = 0;
+        private var _aspectRatio:Number = 0;
         private var _subclip:Boolean = false;
 
         private static var _instance:VideoJSModel;
@@ -207,6 +208,13 @@ package com.videojs{
         }
         public function set endTime(value:Number):void {
             _endTime = value;
+        }
+
+        public function get aspectRatio():Number{
+            return _aspectRatio;
+        }
+        public function set aspectRatio(value:Number):void {
+            _aspectRatio = value;
         }
 
         public function get subclip():Boolean{
